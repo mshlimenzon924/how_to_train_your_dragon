@@ -1,0 +1,8 @@
+﻿Mira Shlimenzon
+nearestEntity() - list of Entities which isn’t an entity parameter call, doesn’t seem to make sense to move this to entities if it is only called in WorldModel and there are no entity variables
+executeAction(), executeAnimationAction(), executeActivityAction()→ put first executeAction in Action since action switch statement and then rest of methods are similar so put them in it too
+nextPosition___ and moveTo__ → lot of entity calls in methods and a few methods with different Entity types - we talked about in class that those methods belong in Entity
+execute__Activity() and transformTree()→ since like we talked about in class different entity types should go into Entity
+adjacent() and numFromRange() - because they both are only called in methods in Entity so what’s the point of putting it in a different class
+ScheduleEvent, unscheduleAllEvents → a lot of EventScheduler calls so seems practical to put it here
+MoveEntity, removeEntity, findNearest(), tryAddEntity()  because addEntity() got added, so then the rest of the entity movement methods seemed to go well there too
